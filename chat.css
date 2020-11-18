@@ -1,0 +1,362 @@
+html {
+	touch-action: none;
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	
+	overflow: hidden;
+}
+
+.ground {
+	margin: auto;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	position: absolute;
+	
+	width: 103.2vmin;
+	height: 90vmin;
+	overflow: hidden;
+	transform: scale(1.4);
+	filter: sepia(100%) blur(0.05vmin);
+}
+
+.move {
+	position: absolute;
+}
+
+.cube {
+	position: absolute;
+	width: 17.3vmin;
+	height: 20.0vmin;
+}
+
+.face {
+	transform-origin: 0 0;
+	position: absolute;
+	width: 10vmin;
+	height: 10vmin;
+	border:#666 inset 0.05vmin;
+	border-radius: 0.025vmin;
+}
+
+.front {
+	background: #333;
+	transform: translate(-2.6vmin, -3.4vmin) rotate(-30deg) skewX(-30deg)
+		translate(13vmin, 17.2vmin) scaleY(0.864);
+}
+
+.top {
+	background: #fff;
+	transform: translate(-2.6vmin, -3.4vmin) rotate(210deg) skew(-30deg)
+		translate(-20vmin, -6vmin) scaleY(0.864);
+}
+
+.side {
+	background: #666;
+	transform: translate(-2.6vmin, -3.4vmin) rotate(90deg) skewX(-30deg)
+		scaleY(0.864) translate(6.8vmin, -13.1vmin);
+}
+
+@keyframes move {
+	0% {
+		transform: translateY(-5.3vmin);
+		filter: brightness(1);
+	}
+	100% {
+		transform: translateY(5.3vmin);
+		filter: brightness(0.1);
+	}
+}
+
+.cube:nth-child(1) {transform: translate(43vmin, 20vmin);}
+.cube:nth-child(2) {transform: translate(34.5vmin, 24.9vmin);}
+.cube:nth-child(3) {transform: translate(51.6vmin, 24.9vmin);}
+.cube:nth-child(4) {transform: translate(26vmin, 29.8vmin);}
+.cube:nth-child(5) {transform: translate(43vmin, 29.8vmin);}
+.cube:nth-child(6) {transform: translate(60.2vmin, 29.8vmin);}
+.cube:nth-child(7) {transform: translate(17.5vmin, 34.7vmin);}
+.cube:nth-child(8) {transform: translate(34.5vmin, 34.7vmin);}
+.cube:nth-child(9) {transform: translate(51.6vmin, 34.7vmin);}
+.cube:nth-child(10) {transform: translate(68.8vmin, 34.7vmin);}
+.cube:nth-child(11) {transform: translate(9vmin, 39.6vmin);}
+.cube:nth-child(12) {transform: translate(26vmin, 39.6vmin);}
+.cube:nth-child(13) {transform: translate(43vmin, 39.6vmin);}
+.cube:nth-child(14) {transform: translate(60.2vmin, 39.6vmin);}
+.cube:nth-child(15) {transform: translate(77.3vmin, 39.6vmin);}
+.cube:nth-child(16) {transform: translate(17.5vmin, 44.5vmin);}
+.cube:nth-child(17) {transform: translate(34.5vmin, 44.5vmin);}
+.cube:nth-child(18) {transform: translate(51.6vmin, 44.5vmin);}
+.cube:nth-child(19) {transform: translate(68.8vmin, 44.5vmin);}
+.cube:nth-child(20) {transform: translate(26vmin, 49.4vmin);}
+.cube:nth-child(21) {transform: translate(43vmin, 49.4vmin);}
+.cube:nth-child(22) {transform: translate(60.2vmin, 49.4vmin);}
+.cube:nth-child(23) {transform: translate(34.5vmin, 54.3vmin);}
+.cube:nth-child(24) {transform: translate(51.6vmin, 54.3vmin);}
+.cube:nth-child(25) {transform: translate(43vmin, 59.2vmin);}
+
+.cube:nth-child(1) > .move {animation: move infinite 1.7s ease-in-out alternate;}
+.cube:nth-child(2) > .move {animation: move infinite 2.4s ease-in-out alternate;}
+.cube:nth-child(3) > .move {animation: move infinite 3.2s ease-in-out alternate;}
+.cube:nth-child(4) > .move {animation: move infinite 1.5s ease-in-out alternate;}
+.cube:nth-child(5) > .move {animation: move infinite 3.9s ease-in-out alternate;}
+.cube:nth-child(6) > .move {animation: move infinite 1.2s ease-in-out alternate;}
+.cube:nth-child(7) > .move {animation: move infinite 4.4s ease-in-out alternate;}
+.cube:nth-child(8) > .move {animation: move infinite 2.5s ease-in-out alternate;}
+.cube:nth-child(9) > .move {animation: move infinite 2.7s ease-in-out alternate;}
+.cube:nth-child(10) > .move {animation: move infinite 1.7s ease-in-out alternate;}
+.cube:nth-child(11) > .move {animation: move infinite 3.4s ease-in-out alternate;}
+.cube:nth-child(12) > .move {animation: move infinite 2.2s ease-in-out alternate;}
+.cube:nth-child(13) > .move {animation: move infinite 1.4s ease-in-out alternate;}
+.cube:nth-child(14) > .move {animation: move infinite 5.6s ease-in-out alternate;}
+.cube:nth-child(15) > .move {animation: move infinite 1.3s ease-in-out alternate;}
+.cube:nth-child(16) > .move {animation: move infinite 3.7s ease-in-out alternate;}
+.cube:nth-child(17) > .move {animation: move infinite 1.1s ease-in-out alternate;}
+.cube:nth-child(18) > .move {animation: move infinite 3.5s ease-in-out alternate;}
+.cube:nth-child(19) > .move {animation: move infinite 4.6s ease-in-out alternate;}
+.cube:nth-child(20) > .move {animation: move infinite 2.2s ease-in-out alternate;}
+.cube:nth-child(21) > .move {animation: move infinite 4.4s ease-in-out alternate;}
+.cube:nth-child(22) > .move {animation: move infinite 2.8s ease-in-out alternate;}
+.cube:nth-child(23) > .move {animation: move infinite 4.7s ease-in-out alternate;}
+.cube:nth-child(24) > .move {animation: move infinite 2.6s ease-in-out alternate;}
+.cube:nth-child(25) > .move {animation: move infinite 1.5s ease-in-out alternate;}
+
+.left {
+	position:absolute;
+	width: 20vmin;
+	height: 50vmin;
+	
+	transform: translate(22.2vmin, 47vmin) rotate(90deg) skewX(-30deg);
+}
+
+.right {
+	position:absolute;
+	width: 55vmin;
+	height: 20vmin;
+
+	transform: translate(47vmin, 61.7vmin) rotate(-30deg) skewX(-30deg);
+}
+
+.C_Class {
+    left: 30%;
+    top: 30%;
+    position: absolute;
+    overflow: visible;
+    width: 52px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 70px;
+    color: rgb(40, 207, 54);
+}
+
+.O_Class {
+    left: 35%;
+    top: 30%;
+    position: absolute;
+    overflow: visible;
+    width: 52px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 70px;
+    color: rgb(46, 117, 25);
+}
+
+.M_Class {
+    left: 40%;
+    top: 30%;
+    position: absolute;
+    overflow: visible;
+    width: 52px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 70px;
+    color: rgb(10, 175, 32);
+}
+
+.I_Class {
+    left: 45%;
+    top: 30%;
+    position: absolute;
+    overflow: visible;
+    width: 52px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 70px;
+    color: rgb(33, 219, 64);
+}
+
+.N_Class {
+    left: 50%;
+    top: 30%;
+    position: absolute;
+    overflow: visible;
+    width: 52px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 70px;
+    color: rgb(21, 235, 21);
+}
+
+.G_Class {
+    left: 55%;
+    top: 30%;
+    position: absolute;
+    overflow: visible;
+    width: 52px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 70px;
+    color: rgb(66, 238, 14);
+}
+
+.S_Class {
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    overflow: visible;
+    width: 52px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 70px;
+    color: rgba(240, 237, 238, 1);
+}
+
+.O1_Class {
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    overflow: visible;
+    width: 52px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 70px;
+    color: rgba(240, 237, 238, 1);
+}
+
+.O2_Class {
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    overflow: visible;
+    width: 52px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 70px;
+    color: rgba(240, 237, 238, 1);
+}
+
+.N1_Class {
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    overflow: visible;
+    width: 52px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 70px;
+    color: rgba(240, 237, 238, 1);
+}
+
+
+:root {
+    --primary-color: rgba(172, 86, 223, 0.801);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+h1 {
+    font-weight: 300;
+    font-size: 50px;
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.showcase {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+    color: white;
+}
+
+.video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+}
+
+.video-container video {
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.video-container:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}

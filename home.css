@@ -1,0 +1,170 @@
+@keyframes animate-main-gradient {
+    from {
+      top: 0;
+    }
+    to {
+      top: -200%;
+    }
+  }
+  @keyframes animate-orange-glow {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+  @keyframes animate-orange-glow-mid {
+    0% {
+      opacity: .2;
+    }
+    65% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  @keyframes animate-sun-rise-large {
+    from {
+      bottom: -70vw;
+    }
+    to {
+      bottom: 0;
+    }
+  }
+  @keyframes animate-sun-rise-small {
+    from {
+      bottom: -70vw;
+    }
+    to {
+      bottom: 10vw;
+    }
+  }
+  @keyframes animate-sun-corona {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: .4;
+    }
+  }
+  @keyframes animate-sun-glow {
+    from {
+      opacity: .3;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes animate-horizon {
+    from {
+      background: #1F323D;
+    }
+    to {
+      background: #C6D6F3;
+    }
+  }
+  html, body {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    background: #000;
+  }
+  
+  .sky {
+    height: 90%;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  .sky .main-gradient {
+    height: 300%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    background: linear-gradient(#000, #005D96 40%, #BAD3D9 80%, #F8CA94 100%);
+    animation: animate-main-gradient 10s 2s forwards;
+  }
+  .sky .orange-glow {
+    height: 40%;
+    width: 100%;
+    position: fixed;
+    bottom: 10%;
+  }
+  .sky .orange-glow.initial {
+    background: linear-gradient(rgba(255, 255, 255, 0) 20%, #F2845C 200%);
+    opacity: 1;
+    animation: animate-orange-glow 10s 2s forwards;
+  }
+  .sky .orange-glow.mid {
+    background: linear-gradient(rgba(255, 255, 255, 0) 50%, #AD5639 110%);
+    opacity: .2;
+    animation: animate-orange-glow-mid 10s 2s forwards;
+  }
+  .sky .orange-glow.final {
+    background: linear-gradient(rgba(255, 255, 255, 0), #FF9563 150%);
+    opacity: 0;
+    animation: animate-orange-glow 10s ease-in 2s reverse forwards;
+  }
+  
+  .sun {
+    height: 70vw;
+    width: 70vw;
+    border-radius: 50%;
+    position: fixed;
+    bottom: -70vw;
+  }
+  @media screen and (max-width: 500px) {
+    .sun {
+      animation: animate-sun-rise-small 10s ease-in-out 2s forwards;
+    }
+  }
+  @media screen and (min-width: 501px) {
+    .sun {
+      animation: animate-sun-rise-large 10s ease-in-out 2s forwards;
+    }
+  }
+  .sun .corona {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    background: radial-gradient(#F55D2A, rgba(255, 255, 255, 0) 60%);
+    animation: animate-sun-corona 6s ease-in 6s forwards;
+  }
+  .sun .glow {
+    height: 30%;
+    width: 30%;
+    border-radius: 50%;
+    position: absolute;
+    top: 37%;
+    left: 34%;
+  }
+  .sun .glow.darker {
+    background: radial-gradient(#F55D2A 35%, rgba(255, 255, 255, 0) 60%);
+    animation: animate-sun-glow 6s 6s reverse forwards;
+  }
+  .sun .glow.lighter {
+    background: radial-gradient(#FFA622 35%, rgba(255, 255, 255, 0) 60%);
+    animation: animate-sun-glow 6s 6s forwards;
+  }
+  .sun .ball {
+    height: 20%;
+    width: 20%;
+    border-radius: 50%;
+    position: absolute;
+    top: 42%;
+    left: 39%;
+    background: radial-gradient(#fff 40%, rgba(255, 255, 255, 0) 60%);
+  }
+  
+  .horizon {
+    background-color: #1F323D;
+    height: 10%;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    animation: animate-horizon 10s ease-in 2s forwards;
+  }

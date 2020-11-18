@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="home.css">
+
+</head>
+<body>
+
+<div class="topnav" id="myTopnav">
+        
+        <a href="home.html" style="font-size: x-large;">HOME</a>
+        <a href="activities.html" style="font-size: x-large;">ACTIVITIES</a>
+        <a href="chat.html" style="font-size: x-large;">CHAT</a>
+        <a href="about.html" style="font-size: x-large;">ABOUT</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
+
+<div class="sky">
+  <div class="main-gradient"></div>
+  <div class="orange-glow initial"></div>
+  <div class="orange-glow mid"></div>
+  <div class="orange-glow final"></div>
+  <div class="sun">
+    <div class="corona"></div>
+    <div class="glow darker"></div>
+    <div class="glow lighter"></div>
+    <div class="ball"></div>
+  </div>
+</div>
+<div class="horizon"></div>
+<script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+</body>
+</html> 
