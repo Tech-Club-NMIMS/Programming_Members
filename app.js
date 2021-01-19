@@ -6,7 +6,7 @@ var app=express();
 var verified = false;
 var emailhash = '';
 
-app.get('/:emailid', function(req, res){
+app.get('/login/:emailid', function(req, res){
     var email= req.params.emailid;
     var random = Math.floor(Math.random()*100);
     emailhash = hash([email, random]);
@@ -34,7 +34,7 @@ app.get('/:emailid', function(req, res){
             else{
                 res.send('email sent successfully')
             }
-            console.log("Message sent: %s", info.messageId);
+            
     
             console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
         });
